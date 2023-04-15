@@ -1,6 +1,6 @@
 # env setup
 - npm install `<dep>`
-```ts
+```sh
 10018  cat package.json
 10019  npm install -D typescript
 10020  npm install -D ts-node
