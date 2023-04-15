@@ -1,9 +1,9 @@
 ```sh
-nestjs
+(nestjs)
 $ npm i -g @nestjs/cli
 $ nest new <project>
 
-express
+(express)
 $ npm init -y
 ```
 
