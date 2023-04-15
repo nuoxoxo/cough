@@ -1,2 +1,4 @@
-# purr
-mini projects, learn nestjs by making them work
+```sh
+$ npm i -g @nestjs/cli
+$ nest new <project>
+```
