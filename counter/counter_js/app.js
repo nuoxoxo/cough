@@ -7,9 +7,13 @@ btns.forEach((btn) => {
     console.log(btn)
     const styles = e.currentTarget.classList;
     if (styles.contains("btn-minus")) {
-      --count;
+      --count
     } else if (styles.contains("btn-plus")) {
-      ++count;
+      ++count
+    } else if (styles.contains("btn-minus-10")) {
+      count -= 10
+    } else if (styles.contains("btn-plus-10")) {
+      count += 10
     } else {
       count = 0;
     }

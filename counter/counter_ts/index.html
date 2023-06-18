@@ -21,7 +21,11 @@
     text-shadow: 2px 2px red;
     font-size: 300px;
     font-weight: bold;
-
+  }
+  .btn {
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
   }
 </style>
 <body>
@@ -32,15 +36,18 @@
         <span id="value">0</span>
       </div>
       <div class="container btn-container">
-        <button class="btn btn-counter btn-minus">Minus</button>
+        <button class="btn btn-counter btn-minus-10">-10</button>
+        <button class="btn btn-counter btn-minus">-1</button>
         <button class="btn btn-counter btn-reset">Reset</button>
-        <button class="btn btn-counter btn-plus">Plus</button>
+        <button class="btn btn-counter btn-plus">+1</button>
+        <button class="btn btn-counter btn-plus-10">+10</button>
       </div>
       <div class="container flipper-container">
-        <button id="btn-flipper">Flip</button>
+        <button class="btn" id="btn-flipper">Flip</button>
       </div>
     </div>
   </main>
-  <script src="app.js"></script>
+  <script src="./public/js/app.js"></script>
+  <!-- <script src="app.ts"></script> -->
 </body>
 </html>
