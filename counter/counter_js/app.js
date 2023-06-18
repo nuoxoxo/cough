@@ -1,4 +1,36 @@
-let button = document.getElementById('btn-flipper')
+let count = 0;
+const val = document.querySelector("#value");
+const btns = document.querySelectorAll(".btn-counter");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    console.log(btn)
+    const styles = e.currentTarget.classList;
+    if (styles.contains("btn-minus")) {
+      --count;
+    } else if (styles.contains("btn-plus")) {
+      ++count;
+    } else {
+      count = 0;
+    }
+
+    // if (count > 0) {
+    //   val.style.color = "green";
+    // }
+    // if (count < 0) {
+    //   val.style.color = "red";
+    // }
+    // if (count === 0) {
+    //   val.style.color = "#222";
+    // }
+    value.textContent = count;
+  })
+})
+
+
+// below: modified from color-flipper
+
+let button_flipper = document.getElementById('btn-flipper')
 let color = document.querySelector('.color')
 
 window.onload = function() {
@@ -6,7 +38,7 @@ window.onload = function() {
   document.body.style.backgroundColor = res[1]
 }
 
-button.addEventListener('click', () => {
+button_flipper.addEventListener('click', () => {
   let res = colorPair()
   document.body.style.backgroundColor = res[1]
   console.log(res)
