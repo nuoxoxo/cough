@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "allowJs": true,
+    "module": "commonJS",
+    "outDir": "./public/js"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
