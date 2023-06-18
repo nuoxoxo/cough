@@ -4,13 +4,11 @@ const color = document.querySelector('.color') as HTMLSpanElement;
 window.onload = function() {
   const res = colorPair();
   document.body.style.backgroundColor = res[1];
-  color.textContent = res[1];
 };
 
 button.addEventListener('click', () => {
   const res = colorPair();
   document.body.style.backgroundColor = res[1];
-  color.textContent = res[1];
   console.log(res);
 });
 
