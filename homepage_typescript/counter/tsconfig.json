@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES5",
-    // "lib": ["es6"], // not having DOM typings
     "allowJs": true,
     "module": "commonJS",
     "outDir": "src"
