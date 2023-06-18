@@ -18,15 +18,6 @@ btns.forEach((btn) => {
       count = 0;
     }
 
-    // if (count > 0) {
-    //   val.style.color = "green";
-    // }
-    // if (count < 0) {
-    //   val.style.color = "red";
-    // }
-    // if (count === 0) {
-    //   val.style.color = "#222";
-    // }
     value.textContent = count;
   })
 })
