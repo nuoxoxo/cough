@@ -6,28 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<style>
-  main {
-    min-height: calc(100vh - 3rem);
-    display: grid;
-    place-items: center;
-  }
-  .container {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  #value {
-    text-align: center;
-    text-shadow: 2px 2px red;
-    font-size: 300px;
-    font-weight: bold;
-  }
-  .btn {
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
 <body>
   <main>
     <div class="container">
@@ -45,8 +24,11 @@
       <div class="container flipper-container">
         <button class="btn" id="btn-flipper">Flip</button>
       </div>
+      <button class="btn btn-link-color-flipper" onclick="window.location.href='../index/index.html';">HOME</button>
+      <button class="btn btn-link-color-flipper" onclick="window.location.href='../flipper/flipper.html';">➜ Flipper</button>
     </div>
   </main>
-  <script src="app.js"></script>
+  <script> var exports = {}; </script>
+  <script src="src/app.js"></script>
 </body>
 </html>
