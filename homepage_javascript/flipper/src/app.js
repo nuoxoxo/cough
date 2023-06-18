@@ -1,4 +1,4 @@
-let button = document.getElementById('btn')
+let button = document.getElementById('btn-flipper')
 let color = document.querySelector('.color')
 
 window.onload = function() {
