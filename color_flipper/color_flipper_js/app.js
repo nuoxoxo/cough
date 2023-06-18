@@ -4,13 +4,11 @@ let color = document.querySelector('.color')
 window.onload = function() {
   let res = colorPair()
   document.body.style.backgroundColor = res[1]
-  color.textContent = res[1]
 }
 
 button.addEventListener('click', () => {
   let res = colorPair()
   document.body.style.backgroundColor = res[1]
-  color.textContent = res[1]
   console.log(res)
 })
 
