@@ -4,7 +4,7 @@
     // "lib": ["es6"], // not having DOM typings
     "allowJs": true,
     "module": "commonJS",
-    "outDir": "./public/js"
+    "outDir": "src"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
