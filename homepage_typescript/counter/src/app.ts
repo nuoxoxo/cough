@@ -57,3 +57,5 @@ function intToHex(code: number) {
   let hex = code.toString(16)
   return hex.length === 1 ? "0" + hex : hex
 }
+
+export {}

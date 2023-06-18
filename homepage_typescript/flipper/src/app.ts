@@ -1,14 +1,16 @@
-const button = document.getElementById('btn') as HTMLButtonElement;
+const button = document.getElementById('btn-flipper') as HTMLButtonElement;
 const color = document.querySelector('.color') as HTMLSpanElement;
 
 window.onload = function() {
   const res = colorPair();
   document.body.style.backgroundColor = res[1];
+  color.textContent = res[1].toString()
 };
 
 button.addEventListener('click', () => {
   const res = colorPair();
   document.body.style.backgroundColor = res[1];
+  color.textContent = res[1].toString()
   console.log(res);
 });
 
@@ -65,3 +67,5 @@ function intToHex(code) {
   return hex.length == 1 ? "0" + hex : hex;
 }
 */
+
+export {}

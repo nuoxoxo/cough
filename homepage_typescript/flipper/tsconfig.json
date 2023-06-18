@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES5",
+    "lib": ["es6"], // not having DOM typings
     "allowJs": true,
     "module": "commonJS",
     "outDir": "./public/js"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "extends": "../tsconfig.json"
 }
