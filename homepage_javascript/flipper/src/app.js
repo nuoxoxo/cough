@@ -3,12 +3,14 @@ let color = document.querySelector('.color')
 
 window.onload = function() {
   let res = colorPair()
-  document.body.style.backgroundColor = res[1]
+  document.body.style.backgroundColor = res[1];
+  color.textContent = res[1].toString()
 }
 
 button.addEventListener('click', () => {
   let res = colorPair()
   document.body.style.backgroundColor = res[1]
+  color.textContent = res[1].toString()
   console.log(res)
 })
 
