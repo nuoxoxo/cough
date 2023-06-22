@@ -1,7 +1,3 @@
-**to re-init before end of may**
-
----
-
 ```sh
 (nestjs)
 $ npm i -g @nestjs/cli
