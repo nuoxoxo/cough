@@ -23,7 +23,7 @@ def hangman():
         board = [c if c in used else '-' for c in w]
 
         ### GRAPHIC
-        print(lives[life])
+        print(visual[life])
 
         print('Current word: ', ' '.join(board))
 
@@ -49,7 +49,7 @@ def hangman():
 
     if life == 0:
         ### GRAPHIC
-        print(lives[life])
+        print(visual[life])
         print('\nYou died, sorry. The word was',w,'.\n')
 
     else:
