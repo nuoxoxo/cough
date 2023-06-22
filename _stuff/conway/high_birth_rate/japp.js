@@ -34,6 +34,9 @@ function game(g, w) {
 
                 This rule promotes more frequent cell reproduction.
 
+
+                Observation:
+                    Too crowded
                 */
                 if (g[r][c] == '.') {
                     if (n == 2 /* 3 */) {
