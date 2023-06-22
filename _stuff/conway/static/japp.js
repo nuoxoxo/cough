@@ -36,7 +36,7 @@ function game(g, w) {
                 This rule tends to create static patterns that remain relatively unchanged over time
 
                 Observation:
-                    "Flashy": the whole grid is blinking
+                    Grid filled quickly
 
                 */
                 if (g[r][c] == '.') {
