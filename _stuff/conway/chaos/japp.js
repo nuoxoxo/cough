@@ -36,6 +36,8 @@ function game(g, w) {
                 This rule introduces more chaotic behavior
                 and can lead to rapid changes in the pattern.
 
+                Observation:
+                    Fast peaceful growth, not chaotic
                 */
                 if (g[r][c] == '.' && n == 4) {
                     tmp.push('#')
