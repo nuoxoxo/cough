@@ -29,16 +29,18 @@ function game(g, w) {
                 let n = count_neighbors(g, r, c, w)
                 /*
 
-                Resilience:
-                    Any live cell with 3 or 4 live neighbors lives on.
+                Immigration:
+                    Any dead cell with an odd number of live neighbors lives on
 
-                This rule allows for a slightly larger range of stable patterns to emerge
+                This rule introduces the concept of immigration,
+                where dead cells spontaneously become live cells.
 
                 Observation:
-                    Cells disappeared too soon
+                    "Flashy": the whole grid is blinking
+
                 */
                 if (g[r][c] == '.') {
-                    if (n == 3) {
+                    if (n % 2 /* == 3 */) {
                         tmp.push('#')
                     }
                     else {
@@ -46,7 +48,7 @@ function game(g, w) {
                     }
                     continue
                 }
-                if (/* [2, 3] */ [3, 4].includes(n)) {
+                if ([2, 3].includes(n)) {
                     tmp.push('#')
                 }
                 else {
