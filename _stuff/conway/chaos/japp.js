@@ -6,7 +6,7 @@ while (++i < w) {
     let tmp = []
     j = -1
     while (++j < w) {
-        if (Math.random() >= .4) {
+        if (Math.random() >= .7) {
             tmp.push('#')
         } else {
             tmp.push('.')
@@ -27,6 +27,24 @@ function game(g, w) {
             c = -1
             while (++c < w) {
                 let n = count_neighbors(g, r, c, w)
+                /*
+
+                Chaos:
+                    Any live cell with exactly one live neighbor dies, 
+                    any dead cell with exactly four live neighbors becomes a live cell. 
+
+                This rule introduces more chaotic behavior
+                and can lead to rapid changes in the pattern.
+
+                */
+                if (g[r][c] == '.' && n == 4) {
+                    tmp.push('#')
+                } else if (g[r][c] === '#' && n == 1) {
+                    tmp.push('.')
+                } else {
+                    tmp.push(g[r][c])
+                }
+                /*
                 if (g[r][c] == '.') {
                     if (n == 3) {
                         tmp.push('#')
@@ -42,6 +60,7 @@ function game(g, w) {
                 else {
                     tmp.push('.')
                 }
+                */
             }
             gg.push(tmp)
         }
