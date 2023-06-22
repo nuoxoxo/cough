@@ -29,22 +29,14 @@ function game(g, w) {
                 let n = count_neighbors(g, r, c, w)
                 /*
 
-                Chaos:
-                    Any live cell with exactly one live neighbor dies, 
-                    any dead cell with exactly four live neighbors becomes a live cell. 
+                Resilience:
+                    Any live cell with 3 or 4 live neighbors lives on.
 
-                This rule introduces more chaotic behavior
-                and can lead to rapid changes in the pattern.
+                This rule allows for a slightly larger range of stable patterns to emerge
 
+                Observation:
+                    Cells disappeared too soon
                 */
-                if (g[r][c] == '.' && n == 4) {
-                    tmp.push('#')
-                } else if (g[r][c] === '#' && n == 1) {
-                    tmp.push('.')
-                } else {
-                    tmp.push(g[r][c])
-                }
-                /*
                 if (g[r][c] == '.') {
                     if (n == 3) {
                         tmp.push('#')
@@ -54,13 +46,12 @@ function game(g, w) {
                     }
                     continue
                 }
-                if ([2, 3].includes(n)) {
+                if (/* [2, 3] */ [3, 4].includes(n)) {
                     tmp.push('#')
                 }
                 else {
                     tmp.push('.')
                 }
-                */
             }
             gg.push(tmp)
         }
