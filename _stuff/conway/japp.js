@@ -30,16 +30,14 @@ function game(g, w) {
                 if (g[r][c] == '.') {
                     if (n == 3) {
                         tmp.push('#')
-                    }
-                    else {
+                    } else {
                         tmp.push('.')
                     }
                     continue
                 }
                 if ([2, 3].includes(n)) {
                     tmp.push('#')
-                }
-                else {
+                } else {
                     tmp.push('.')
                 }
             }
