@@ -1,12 +1,14 @@
-from words import words
 import string
 import random
 
 from visual import visual
 
-
 def hangman():
     stand = string.ascii_uppercase
+
+    path = 'words'
+    words = open(path, 'r').read().splitlines()
+
     w = gen_word(words) ### char set in the given word
 
     pool = set(w) ### letters remaining in w
