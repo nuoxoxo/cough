@@ -25,14 +25,16 @@ window.onload = () => {
     ctn.innerHTML = res
 
     doSomething()
-}
 
-
-function doSomething () {
     let wahou = document.getElementsByClassName('waooo')
     for (let elem of wahou) {
         elem.onclick = doSomething
     }
+}
+
+
+function doSomething () {
+
     for (let elem of wahou) {
         elem.innerText = a[Math.floor(Math.random() * a.length)]
         let R = Math.floor(Math.random() * 251)
