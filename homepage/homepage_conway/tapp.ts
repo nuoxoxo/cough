@@ -33,7 +33,7 @@ window.onload = () => {
                 cells += ' '
             }
         }
-        let rowId = 'row-' + i // ...
+        let rowId = 'row-' + i
         res += '<div id=\'' + rowId + '\' class=\'rows\'>' + cells + '</div>'
         g_grid.push(row)
     }
@@ -66,7 +66,9 @@ async function iterate_automaton() {
         row.innerText = g_grid[i].join(' ')
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 42))
+    await new Promise(
+        (resolve) => setTimeout(resolve, 42)
+    )
     requestAnimationFrame(iterate_automaton)
 }
 
@@ -78,6 +80,7 @@ function iteration() {
         let tmp = []
         c = -1
         while (++c < g_cols) {
+
             let n = count_neighbors(r, c)
             if (g_grid[r][c] === g_hollow) {
                 if (n === 3) {
@@ -86,7 +89,9 @@ function iteration() {
                     tmp.push(g_hollow)
                 }
                 continue
+
             } else if (g_grid[r][c] === g_symbol) {
+
                 if ([2, 3].includes(n)) {
                     tmp.push(g_symbol)
                 } else {
@@ -105,7 +110,7 @@ function iteration() {
     let x = Math.floor(Math.random() * g_rows)
     let y = Math.floor(Math.random() * g_cols)
     g[x][y] = g_grid[x][y] === g_hollow ? g_symbol : g_hollow
-    console.log(x, y, g[x][y])
+    // console.log(x, y, g[x][y])
 
 
     g_grid = g.map(function(a) {
