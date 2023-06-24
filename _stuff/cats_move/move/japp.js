@@ -1,17 +1,38 @@
 let a = [
-  'yncvpaveC rY',
-  'syrflZ sb xpvF',
-  'flnQ tavaehO',
-  '! hbunJ',
-  'rtnvenz gvgrc gvgrc ghbg regbA',
-  'vznzH',
-  'vbz gr reèc abZ',
-  "anpvgnI hq rgfvpebkr'Y",
-  'leenO rq raanrW',
-  "fgêebS fry gr ehbzN'Y",
-  'anyvZ à gvha reèvaerQ',
-  'anzlrtbbO ruG'
+    'yncvpaveC rY',
+    'syrflZ sb xpvF',
+    'flnQ tavaehO',
+    '! hbunJ',
+    'rtnvenz gvgrc gvgrc ghbg regbA',
+    'vznzH',
+    'vbz gr reèc abZ',
+    "anpvgnI hq rgfvpebkr'Y",
+    'leenO rq raanrW',
+    "fgêebS fry gr ehbzN'Y",
+    'anyvZ à gvha reèvaerQ',
+    'anzlrtbbO ruG'
 ]
+
+let wahou = document.getElementsByClassName('waooo')
+    for (let elem of wahou) {
+        elem.onclick = doSomething
+}
+
+function doSomething () {
+
+    for (let elem of wahou) {
+        elem.innerText = a[Math.floor(Math.random() * a.length)]
+        console.log(elem.style, elem.style.color)
+        let R = Math.floor(Math.random() * 251)
+        let G = Math.floor(Math.random() * 251)
+        let B = Math.floor(Math.random() * 251)
+        elem.style.color = 'rgb(' + R + ',' + G + ',' + B + ')'
+    }
+}
+
+window.onload = () => {
+    doSomething()
+}
 
 /*
 // console.log(a)
@@ -49,24 +70,3 @@ while (++i < a.length) {
 }
 // console.log(a)
 */
-
-let wahou = document.getElementsByClassName('waooo')
-for (let elem of wahou) {
-elem.onclick = doSomething
-}
-function doSomething () {
-for (let elem of wahou) {
-elem.innerText = a[Math.floor(Math.random() * a.length)]
-console.log(elem.style, elem.style.color)
-let R = Math.floor(Math.random() * 251)
-let G = Math.floor(Math.random() * 251)
-let B = Math.floor(Math.random() * 251)
-elem.style.color = 'rgb(' + R + ',' + G + ',' + B + ')'
-}
-}
-window.onload = () => {
-doSomething()
-}
-
-
-
