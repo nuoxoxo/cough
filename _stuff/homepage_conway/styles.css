@@ -7,8 +7,9 @@
     place-items: center;
     user-select: none;
     text-align: center;
-    text-shadow: 2px 2px red;
-    font-size: 42px;
+    text-shadow: 2px 2px brown;
+    font-size: 10px;
+    color: yellow;
     font-weight: bold;
     font-family: monospace;
 }
