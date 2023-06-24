@@ -1,15 +1,20 @@
+body {
+    background-color: black;
+}
+
 .container {
     cursor:pointer;
 }
+
 .container {
     display: grid;
     min-height: calc(100vh - 3rem);
     place-items: center;
     user-select: none;
     text-align: center;
-    text-shadow: 2px 2px brown;
+    text-shadow: 2px 2px red;
     font-size: 10px;
-    color: yellow;
+    color: white;
     font-weight: bold;
     font-family: monospace;
 }
