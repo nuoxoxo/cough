@@ -1,7 +1,7 @@
 const g_cols = 100
 const g_rows = 42
 let g_grid = []
-let g_charset = '@#$%&?¬πø¥†®©∑œ∂ßµ∆≤∫çƒƒ'
+let g_charset = '@#$%&?¬πø¥†®©∑œ∂ßµ∆≤∫çƒ♠♣♥♦♧♤♢♡♫♬✪✯✰'
 let g_symbol = g_charset[Math.floor(Math.random() * g_charset.length)]
 
 window.onload = () => {

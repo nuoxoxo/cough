@@ -1,11 +1,14 @@
 const g_cols = 100
 const g_rows = 42
 let g_grid = []
-let g_charset = '@#$%&?¬πø¥†®©∑œ∂ßµ∆≤∫çƒƒ'
+let g_charset = '@#$%&?¬πø¥†®©∑œ∂ßµ∆≤∫çƒ♠♣♥♦♧♤♢♡♫♬✪✯✰♭♮♯'
 let g_symbol = g_charset[Math.floor(Math.random() * g_charset.length)]
+let g_hollow = '_'
+
 
 // in JS, animationRequestId is pre-defined
 let animationRequestId: number | null = null;
+
 
 window.onload = () => {
     let ctn: HTMLElement = document.querySelector('.container')
@@ -22,7 +25,7 @@ window.onload = () => {
                 cells += chr
                 row.push(chr)
             } else {
-                chr = '.'
+                chr = g_hollow
                 cells += chr
                 row.push(chr)
             }
@@ -38,6 +41,7 @@ window.onload = () => {
     ctn.onclick = start_automaton
 }
 
+
 function start_automaton() {    
     // ver 1 : sim accelerates on click
 
@@ -50,6 +54,7 @@ function start_automaton() {
         iterate_automaton()
     }
 }
+
 
 async function iterate_automaton() {
     iteration()
@@ -74,32 +79,44 @@ function iteration() {
         c = -1
         while (++c < g_cols) {
             let n = count_neighbors(r, c)
-            if (g_grid[r][c] === '.') {
+            if (g_grid[r][c] === g_hollow) {
                 if (n === 3) {
                     tmp.push(g_symbol)
                 } else {
-                    tmp.push('.')
+                    tmp.push(g_hollow)
                 }
                 continue
-            }
-            if ([2, 3].includes(n)) {
-                tmp.push(g_symbol)
+            } else if (g_grid[r][c] === g_symbol) {
+                if ([2, 3].includes(n)) {
+                    tmp.push(g_symbol)
+                } else {
+                    tmp.push(g_hollow)
+                }
             } else {
-                tmp.push('.')
+                tmp.push(g_grid[r][c])
             }
         }
         g.push(tmp)
     }
+
+
+    // vitality hack : one cell flip in each iter
+
+    let x = Math.floor(Math.random() * g_rows)
+    let y = Math.floor(Math.random() * g_cols)
+    g[x][y] = g_grid[x][y] === g_hollow ? g_symbol : g_hollow
+    console.log(x, y, g[x][y])
+
+
     g_grid = g.map(function(a) {
         return a.slice()
     })
 }
 
+
 function count_neighbors(R, C) {
     let dir = [-1, 0, 1]
-    let res = 0,
-        r,
-        c
+    let res = 0, r, c
     for (let a of dir) {
         for (let b of dir) {
             if (a === 0 && b === 0) {
@@ -114,3 +131,4 @@ function count_neighbors(R, C) {
     }
     return res
 }
+
