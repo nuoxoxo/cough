@@ -7,11 +7,16 @@ let g_hollow = '_'
 
 
 // in JS, animationRequestId is pre-defined
-let animationRequestId: number | null = null;
+let animationRequestId: number | null = null
 
 
 window.onload = () => {
-    let ctn: HTMLElement = document.querySelector('.container')
+    let clr = colorPair()[1]
+
+    console.log(clr, clr.toString())
+
+    document.body.style.backgroundColor = clr.toString()
+    let ctn: HTMLElement = document.querySelector('.container-conway')
     let res = ''
     let i = -1
     while (++i < g_rows) {
@@ -137,3 +142,57 @@ function count_neighbors(R, C) {
     return res
 }
 
+
+//  flip background color + change cell to an inverted color
+
+
+let button_flipper = document.getElementById('btn-flipper')
+let color = document.querySelector('.color') as HTMLElement
+
+button_flipper.addEventListener('click', () => {
+  let res = colorPair()
+  console.log(res[1], res[1].toString())
+  document.body.style.backgroundColor = res[1].toString()
+
+  // invert cell color
+  let ctn: HTMLElement = document.querySelector('.container-conway')
+  ctn.style.color = invertColorHex(res[1].toString())
+
+  // console.log(res)
+
+})
+
+function colorPair() {
+  let r = Math.floor(Math.random() * 256)
+  let g = Math.floor(Math.random() * 256)
+  let b = Math.floor(Math.random() * 256)
+  let res0 = `rgba(${r}, ${g}, ${b})`
+  let res1 = rgbToHexStr(r, g, b).toUpperCase()
+  let res2:number[] = [r, g, b]
+  return [res0, res1, res2]
+}
+
+
+function rgbToHexStr(r: number, g: number, b: number) {
+  return "#" + intToHex(r) + intToHex(g) + intToHex(b)
+}
+
+function intToHex(code: number) {
+  let hex = code.toString(16)
+  return hex.length === 1 ? "0" + hex : hex
+}
+
+function invertColorHex(hex) {
+    const color = hex.startsWith("#") ? hex.slice(1) : hex;
+    const max = 255;
+    const r = max - parseInt(color.substr(0, 2), 16);
+    const g = max - parseInt(color.substr(2, 2), 16);
+    const b = max - parseInt(color.substr(4, 2), 16);
+    const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("");
+    return res;
+  }
+  
+  
+  
+
+// export {}
