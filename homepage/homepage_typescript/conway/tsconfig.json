@@ -1,8 +1,11 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "module": "es6",
-      "outDir": "dist"
-    },
-    "include": ["*.ts"]
-  }
+  "compilerOptions": {
+    "target": "ES5",
+    "allowJs": true,
+    "module": "commonJS",
+    "outDir": "src"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"],
+  "extends": "../tsconfig.json"
+}

@@ -5,7 +5,7 @@
     "module": "commonJS",
     "outDir": "src"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"],
   "extends": "../tsconfig.json"
 }
