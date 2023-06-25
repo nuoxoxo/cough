@@ -1,4 +1,4 @@
 # Run
-```rs
-➜  homepage_typescript git:(branch) tsc
+```r
+➜  root git:(branch) tsc
 ```
