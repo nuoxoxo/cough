@@ -11,7 +11,8 @@ let res = arr.reduce((a, b) => a + b, 0)
 
 let lv = 0
 let res2 = 1e9
-let s = new Set()
+let s: Set<number> = new Set()
+
 let i = -1
 while (++i < arr.length) {
     let a = arr[i]
