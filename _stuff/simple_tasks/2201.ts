@@ -4,7 +4,7 @@ let input:string[] = fs.readFileSync('inputs/2201.in').toString().trim().split('
 let arr:number[] = []
 
 for (let i of input) {
-    let sum = i.split('\n').map((n) => {return parseInt(n)}).reduce((a, b) => a + b, 0)
+    let sum = i.split('\n').map((n) => parseInt(n)).reduce((a, b) => a + b, 0)
     arr.push(sum)
 }
 
