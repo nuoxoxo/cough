@@ -3,8 +3,7 @@
     "target": "ES5",
     "allowJs": true,
     "module": "commonJS",
-    "outDir": "src/"
+    "outDir": ""
   },
   "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
 }

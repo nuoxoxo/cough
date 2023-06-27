@@ -183,13 +183,13 @@ function intToHex(code: number) {
 }
 
 function invertColorHex(hex) {
-    const color = hex.startsWith("#") ? hex.slice(1) : hex;
-    const max = 255;
-    const r = max - parseInt(color.substr(0, 2), 16);
-    const g = max - parseInt(color.substr(2, 2), 16);
-    const b = max - parseInt(color.substr(4, 2), 16);
-    const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("");
-    return res;
+    const color = hex.startsWith("#") ? hex.slice(1) : hex
+    const max = 255
+    const r = max - parseInt(color.substr(0, 2), 16)
+    const g = max - parseInt(color.substr(2, 2), 16)
+    const b = max - parseInt(color.substr(4, 2), 16)
+    const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("")
+    return res
   }
   
   
