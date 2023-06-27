@@ -11,6 +11,10 @@ lib-cov
 
 *pycache*
 
+dist
+public
+src
+
 pids
 logs
 results

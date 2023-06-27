@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+main {
+    min-height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+}
+
+.btn {
+    font-family: monospace;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.container {
+    text-align: center;
+    margin: 1em;
+}
+
+.container-conway {
+    cursor:pointer;
+    display: grid;
+    min-height: calc(100vh - 3rem);
+    place-items: center;
+    user-select: none;
+    text-align: center;
+    text-shadow: 2px 2px red;
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+}

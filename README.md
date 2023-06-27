@@ -1,3 +1,5 @@
+<!--
+
 ```sh
 (nestjs)
 $ npm i -g @nestjs/cli
@@ -11,3 +13,5 @@ $ npm install -D nodemon
 ```
 
 - `main.ts` is the entrypoint of a nestjs app
+
+-->
