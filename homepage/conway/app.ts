@@ -190,9 +190,6 @@ function invertColorHex(hex) {
     const b = max - parseInt(color.substr(4, 2), 16)
     const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("")
     return res
-  }
-  
-  
-  
+}
 
-// export {}
+export {}
