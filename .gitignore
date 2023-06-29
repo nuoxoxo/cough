@@ -14,6 +14,7 @@ lib-cov
 dist
 public
 src
+javascript-basic-projects
 
 pids
 logs
