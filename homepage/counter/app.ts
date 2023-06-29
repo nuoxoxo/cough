@@ -80,6 +80,11 @@ function intToHex(code: number) {
   return hex.length === 1 ? "0" + hex : hex
 }
 
+//  nav bar functionality
+nav_toggle.addEventListener('click', () => {
+  nav_links.classList.toggle('nav-links-show')
+})
+
 // need the following func from Conway for nav bar links-a coloring
 function invertColorHex(hex) {
   const color = hex.startsWith("#") ? hex.slice(1) : hex
