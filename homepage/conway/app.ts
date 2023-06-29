@@ -1,5 +1,5 @@
-const g_cols = 100
-const g_rows = 42
+const g_cols = 120
+const g_rows = 32
 let g_grid = []
 let g_charset = '@#$%&?¬πø¥†®©∑œ∂ßµ∆≤∫çƒ♠♣♥♦♧♤♢♡♫♬✪✯✰♭♮♯'
 let g_symbol = g_charset[Math.floor(Math.random() * g_charset.length)]
