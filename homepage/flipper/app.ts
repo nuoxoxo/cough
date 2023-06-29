@@ -33,4 +33,12 @@ function intToHex(code: number): string {
 }
 
 
+//  nav bar
+let nav_toggle = document.querySelector('.nav-toggle')
+let nav_links = document.querySelector('.nav-links')
+nav_toggle.addEventListener('click', () => {
+  nav_links.classList.toggle('nav-links-show')
+})
+
+
 export {}
