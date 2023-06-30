@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "lib": ["es2018", "dom"],
-
     "target": "ES5",
     "allowJs": true,
     "module": "commonJS",

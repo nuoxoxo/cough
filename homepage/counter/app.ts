@@ -43,7 +43,7 @@ let button_flipper = document.getElementById('btn-flipper')
 let color = document.querySelector('.color') as HTMLElement
 
 window.onload = function () {
-  let res = colorPair()
+  let res = colorRgbHexPair()
   document.body.style.backgroundColor = res[1]
 
   // nav bar links--li--a coloring
@@ -54,7 +54,7 @@ window.onload = function () {
 
 
 button_flipper.addEventListener('click', () => {
-  let res = colorPair()
+  let res = colorRgbHexPair()
   document.body.style.backgroundColor = res[1]
   console.log(res)
 
@@ -66,7 +66,7 @@ button_flipper.addEventListener('click', () => {
 })
 
 
-function colorPair() {
+function colorRgbHexPair() {
   let r = Math.floor(Math.random() * 256)
   let g = Math.floor(Math.random() * 256)
   let b = Math.floor(Math.random() * 256)

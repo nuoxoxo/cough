@@ -11,7 +11,7 @@ let animationRequestId: number | null = null
 
 
 window.onload = () => {
-    let clr = colorPair()[1]
+    let clr = colorRgbHexPair()[1]
     // console.log(clr, clr.toString())
     document.body.style.backgroundColor = clr.toString()
     let ctn: HTMLElement = document.querySelector('.container-conway')
@@ -148,7 +148,7 @@ let color = document.querySelector('.color') as HTMLElement
 
 
 button_flipper.addEventListener('click', () => {
-  let res = colorPair()
+  let res = colorRgbHexPair()
   console.log(res[1], res[1].toString())
   document.body.style.backgroundColor = res[1].toString()
 
@@ -161,7 +161,7 @@ button_flipper.addEventListener('click', () => {
 })
 
 
-function colorPair() {
+function colorRgbHexPair() {
   let r = Math.floor(Math.random() * 256)
   let g = Math.floor(Math.random() * 256)
   let b = Math.floor(Math.random() * 256)
