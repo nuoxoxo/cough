@@ -15,7 +15,7 @@ let nav_links_a = Array.from(document.querySelectorAll('.nav-links li a'))
 
 
 window.onload = function() {
-  const res = colorPair()
+  const res = colorRgbHexPair()
   document.body.style.backgroundColor = res[1]
   color.textContent = res[1]
 
@@ -27,7 +27,7 @@ window.onload = function() {
 
 
 button.addEventListener('click', () => {
-  const res = colorPair()
+  const res = colorRgbHexPair()
   document.body.style.backgroundColor = res[1]
   color.textContent = res[1]
   console.log(res)
@@ -40,7 +40,7 @@ button.addEventListener('click', () => {
 })
 
 
-function colorPair(): [string, string] {
+function colorRgbHexPair(): [string, string] {
   const r: number = Math.floor(Math.random() * 256)
   const g: number = Math.floor(Math.random() * 256)
   const b: number = Math.floor(Math.random() * 256)
