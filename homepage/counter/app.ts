@@ -2,6 +2,7 @@ let count:number = 0
 const value = document.querySelector("#value") as HTMLElement
 const btns = document.querySelectorAll(".btn-counter")
 
+
 //  nav bar selection
 let nav_toggle = document.querySelector('.nav-toggle')
 let nav_links = document.querySelector('.nav-links')
@@ -12,6 +13,7 @@ let nav_links_a = Array.from(document.querySelectorAll('.nav-links li a'))
 //   a.style.color = invertColorHex(window.getComputedStyle(document.body).backgroundColor[1])
 //   console.log(a.style.color)
 // })
+
 
 btns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
@@ -50,6 +52,7 @@ window.onload = function () {
   })
 }
 
+
 button_flipper.addEventListener('click', () => {
   let res = colorPair()
   document.body.style.backgroundColor = res[1]
@@ -62,6 +65,7 @@ button_flipper.addEventListener('click', () => {
   })
 })
 
+
 function colorPair() {
   let r = Math.floor(Math.random() * 256)
   let g = Math.floor(Math.random() * 256)
@@ -71,9 +75,11 @@ function colorPair() {
   return [res0, res1]
 }
 
+
 function rgbToHex(r: number, g: number, b: number) {
   return "#" + intToHex(r) + intToHex(g) + intToHex(b)
 }
+
 
 function intToHex(code: number) {
   let hex = code.toString(16)
@@ -85,6 +91,7 @@ nav_toggle.addEventListener('click', () => {
   nav_links.classList.toggle('nav-links-show')
 })
 
+
 // need the following func from Conway for nav bar links-a coloring
 function invertColorHex(hex) {
   const color = hex.startsWith("#") ? hex.slice(1) : hex
@@ -95,5 +102,6 @@ function invertColorHex(hex) {
   const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("")
   return res
 }
+
 
 export {}
