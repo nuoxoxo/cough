@@ -12,9 +12,7 @@ let animationRequestId: number | null = null
 
 window.onload = () => {
     let clr = colorPair()[1]
-
-    console.log(clr, clr.toString())
-
+    // console.log(clr, clr.toString())
     document.body.style.backgroundColor = clr.toString()
     let ctn: HTMLElement = document.querySelector('.container-conway')
     let res = ''
@@ -51,7 +49,6 @@ function start_automaton() {
     // ver 1 : sim accelerates on click
 
     // iterate_automaton ()
-
 
     // ver 2 : does not accelerates
 
@@ -149,6 +146,7 @@ function count_neighbors(R, C) {
 let button_flipper = document.getElementById('btn-flipper')
 let color = document.querySelector('.color') as HTMLElement
 
+
 button_flipper.addEventListener('click', () => {
   let res = colorPair()
   console.log(res[1], res[1].toString())
@@ -161,6 +159,7 @@ button_flipper.addEventListener('click', () => {
   // console.log(res)
 
 })
+
 
 function colorPair() {
   let r = Math.floor(Math.random() * 256)
@@ -177,10 +176,12 @@ function rgbToHexStr(r: number, g: number, b: number) {
   return "#" + intToHex(r) + intToHex(g) + intToHex(b)
 }
 
+
 function intToHex(code: number) {
   let hex = code.toString(16)
   return hex.length === 1 ? "0" + hex : hex
 }
+
 
 function invertColorHex(hex) {
     const color = hex.startsWith("#") ? hex.slice(1) : hex
@@ -191,5 +192,6 @@ function invertColorHex(hex) {
     const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("")
     return res
 }
+
 
 export {}
