@@ -20,7 +20,6 @@ for (let s of a) {
     }
 }
 
-
 console.log(res)
 console.log(res2)
 

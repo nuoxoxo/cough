@@ -4,6 +4,8 @@ let arr:number[] = fs.readFileSync('inputs/2001.in').toString().trim().split('\n
 let D:number[] = []
 
 let res = 0
+
+/*
 for (let a of arr) {
     if (D.includes(2020 - a)) {
         res = (2020 - a) * a
@@ -11,6 +13,15 @@ for (let a of arr) {
         D.push(a)
     }
 }
+*/
+
+arr.forEach((a) => {
+    if (D.includes(2020 - a)) {
+        res = (2020 - a) * a
+    } else {
+        D.push(a)
+    }
+})
 
 let res2 = 0
 for (let a of arr) {
@@ -26,4 +37,7 @@ for (let a of arr) {
 
 console.log(res)
 console.log(res2)
+
+console.assert(res === 605364)
+console.assert(res2 === 128397680)
 
