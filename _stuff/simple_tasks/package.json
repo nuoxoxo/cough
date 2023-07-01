@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "tsc && node dist/2101.js",
+    "build": "tsc && node dist/2001.js",
+    "__build": "tsc && node dist/2101.js",
     "__build": "tsc && node dist/2201.js"
   }  
 }
