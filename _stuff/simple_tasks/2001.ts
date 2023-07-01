@@ -38,3 +38,6 @@ for (let a of arr) {
 console.log(res)
 console.log(res2)
 
+console.assert(res === 605364)
+console.assert(res2 === 128397680)
+
