@@ -2,5 +2,5 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["**/*.ts"]
+  "include": ["2201.ts"]
 }

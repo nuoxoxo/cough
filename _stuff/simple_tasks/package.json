@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build": "tsc && node dist/2201.js"
+  }  
+}
