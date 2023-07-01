@@ -25,3 +25,6 @@ while (++i < arr.length) {
 console.log(res)
 console.log(res2)
 
+console.assert(res === 1228)
+console.assert(res2 === 1257)
+
