@@ -28,4 +28,3 @@ console.log(arr[0] + arr[1] + arr[2])
 console.assert(res === 69281)
 console.assert(res2 === 201524)
 
-

@@ -31,3 +31,6 @@ while (++i < arr.length) {
 console.log(res)
 console.log(res2)
 
+console.assert(res === 529)
+console.assert(res2 === 464)
+
