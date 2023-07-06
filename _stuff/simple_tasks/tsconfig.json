@@ -2,7 +2,9 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["2001.ts"],
-  "__include": ["2101.ts"],
-  "__include": ["2201.ts"]
+  "include": ["1801.ts"],
+  "_include": ["1901.ts"],
+  "_include": ["2001.ts"],
+  "_include": ["2101.ts"],
+  "_include": ["2201.ts"]
 }

@@ -1,7 +1,10 @@
 {
   "scripts": {
-    "build": "tsc && node dist/2001.js",
-    "__build": "tsc && node dist/2101.js",
-    "__build": "tsc && node dist/2201.js"
+    "build": "tsc && node dist/1801.js",
+    "_build": "tsc && node dist/1901.js",
+    "_build": "tsc && node dist/2001.js",
+    "_build": "tsc && node dist/2101.js",
+    "_build": "tsc && node dist/2201.js",
+    "start": "npm run build"
   }  
 }
