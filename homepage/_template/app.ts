@@ -11,7 +11,7 @@ let nav_links_a = Array.from(document.querySelectorAll('.nav-links li a'))
 
 // below: modified from color-flipper
 
-// let button_flipper = document.getElementById('btn-flipper')
+let button_flipper = document.getElementById('btn-flipper')
 let color = document.querySelector('.color') as HTMLElement
 
 window.onload = function () {
@@ -25,17 +25,17 @@ window.onload = function () {
 }
 
 
-// button_flipper.addEventListener('click', () => {
-//   let res = colorRgbHexPair()
-//   document.body.style.backgroundColor = res[1]
-//   console.log(res)
+button_flipper.addEventListener('click', () => {
+  let res = colorRgbHexPair()
+  document.body.style.backgroundColor = res[1]
+  console.log(res)
 
-//   // nav bar links--li--a coloring
-//   nav_links_a.forEach((a: HTMLElement) => {
-//     a.style.color = invertColorHex(res[1])
-//     // console.log(a.style.color)
-//   })
-// })
+  // nav bar links--li--a coloring
+  nav_links_a.forEach((a: HTMLElement) => {
+    a.style.color = invertColorHex(res[1])
+    // console.log(a.style.color)
+  })
+})
 
 
 function colorRgbHexPair() {
