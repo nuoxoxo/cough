@@ -79,10 +79,28 @@ function invertColorHex(hex) {
 // strrev
 
 function strrev() {
-  let strToVeRev = document.getElementById('str-to-be-rev') as HTMLInputElement
-  let line = strToVeRev.value
-  let res = line.split('').reverse().join('')
+  let strToBeRev: HTMLInputElement = document.getElementById('str-to-be-rev') as HTMLInputElement
+  let line: string = strToBeRev.value
+  let res: string = line.split('').reverse().join('')
   document.getElementById('str-reversed').textContent = res
+}
+
+//  Copy the reversed str to clipboard (for strrev)
+
+function copyRevStrToClipboard() {
+  let reversedString: string = document.getElementById('str-reversed').textContent;
+
+  // Create a temporary textarea element
+  var tempTextArea = document.createElement('textarea');
+  tempTextArea.value = reversedString;
+  document.body.appendChild(tempTextArea);
+
+  // Select and copy the text
+  tempTextArea.select();
+  document.execCommand('copy');
+
+  // Remove the temporary textarea
+  document.body.removeChild(tempTextArea);
 }
 
 

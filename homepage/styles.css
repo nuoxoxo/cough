@@ -40,6 +40,15 @@ main {
   margin-bottom: 3em;
 }
 
+#str-to-be-rev {
+  height: 21px;
+  vertical-align: middle;
+}
+
+#str-to-be-rev:placeholder {
+  font-size: 12px
+}
+
 .btn {
     font-family: monospace;
     text-align: center;
