@@ -76,4 +76,14 @@ function invertColorHex(hex) {
 }
 
 
+// strrev
+
+function strrev() {
+  let strToVeRev = document.getElementById('str-to-be-rev') as HTMLInputElement
+  let line = strToVeRev.value
+  let res = line.split('').reverse().join('')
+  document.getElementById('str-reversed').textContent = res
+}
+
+
 export {}

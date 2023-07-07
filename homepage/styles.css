@@ -25,6 +25,14 @@ main {
   font-family: monospace;
 }
 
+#str-reversed {
+  user-select: none;
+  text-shadow: 2px 2px red;
+  font-size: 42px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
 #joke-container-inner {
   text-align: left;
   width: 100%;
